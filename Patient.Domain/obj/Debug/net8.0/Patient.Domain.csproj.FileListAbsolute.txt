@@ -1,0 +1,11 @@
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\bin\Debug\net8.0\Patient.Domain.deps.json
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\bin\Debug\net8.0\Patient.Domain.dll
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\bin\Debug\net8.0\Patient.Domain.pdb
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.AssemblyInfoInputs.cache
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.AssemblyInfo.cs
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.csproj.CoreCompileInputs.cache
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.dll
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\refint\Patient.Domain.dll
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\Patient.Domain.pdb
+G:\Mi unidad\Diplomado Arquitectura de Microservicios\Modulo 2\Codigo\Patient\Patient.Domain\obj\Debug\net8.0\ref\Patient.Domain.dll

@@ -1,0 +1,25 @@
+# Archivos y carpetas de compilación
+bin/
+obj/
+publish/
+*.pdb
+
+# Archivos de configuración y logs
+appsettings*.json
+secrets.json
+*.log
+
+# Dependencias de usuario y sistema
+.vscode/
+.idea/
+*.suo
+*.user
+*.lock.json
+
+# Archivos de control de versiones
+.git/
+.gitignore
+.env
+
+# Archivos de Docker
+docker-compose.override.yml

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "N6v3HpWBP52h3bk0fFW57AYqjl3rJOh8+qls1niAP+4=",
+  "Source": "PatientManagement.WebApi",
+  "BasePath": "_content/PatientManagement.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

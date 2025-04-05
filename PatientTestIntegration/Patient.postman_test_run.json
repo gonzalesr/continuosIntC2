@@ -1,0 +1,79 @@
+{
+	"id": "7d1ff051-cc85-4c0f-96b6-cf3cf70b6520",
+	"name": "Patient",
+	"timestamp": "2025-02-03T02:28:29.490Z",
+	"collection_id": "41542440-8b65f356-26de-437d-a249-fefce73d3839",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 10,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-02-03T02:28:28.263Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b044ec60-4112-49d9-9377-759cc10c3d4f",
+			"name": "Add Patient",
+			"url": "https://localhost:7299/api/Patient",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				203,
+				49,
+				45,
+				34,
+				40
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				},
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				},
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				},
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				},
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 371,
+	"collection": {
+		"requests": [
+			{
+				"id": "b044ec60-4112-49d9-9377-759cc10c3d4f",
+				"method": "POST"
+			}
+		]
+	}
+}

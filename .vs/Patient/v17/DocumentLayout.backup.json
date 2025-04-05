@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|c:\\users\\home\\documents\\github\\mod3patient\\patient\\patientmanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|solutionrelative:patientmanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|c:\\users\\home\\documents\\github\\mod3patient\\patient\\patientmanagement.webapi\\controllers\\initialconsultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|solutionrelative:patientmanagement.webapi\\controllers\\initialconsultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|c:\\users\\home\\documents\\github\\mod3patient\\patient\\patientmanagement.webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC321CA9-191B-412D-9BAD-15EB0A5DAE58}|PatientManagement.WebApi\\PatientManagement.WebApi.csproj|solutionrelative:patientmanagement.webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InitialConsultationController.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Controllers\\InitialConsultationController.cs",
+              "RelativeDocumentMoniker": "PatientManagement.WebApi\\Controllers\\InitialConsultationController.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Controllers\\InitialConsultationController.cs",
+              "RelativeToolTip": "PatientManagement.WebApi\\Controllers\\InitialConsultationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T01:14:02.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "PatientManagement.WebApi\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "PatientManagement.WebApi\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T01:13:03.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "PatientManagement.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\GitHub\\Mod3Patient\\Patient\\PatientManagement.WebApi\\Program.cs",
+              "RelativeToolTip": "PatientManagement.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T01:09:49.577Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

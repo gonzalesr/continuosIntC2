@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "8b65f356-26de-437d-a249-fefce73d3839",
+		"name": "Patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41542440"
+	},
+	"item": [
+		{
+			"name": "Add Patient",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const es_error = pm.collectionVariables.get(\"es_error\");\r",
+							"\r",
+							"if (es_error == 0) {\r",
+							"    pm.test(\"Status code is 400\", function () {\r",
+							"        pm.response.to.have.status(400);\r",
+							"    });\r",
+							"    return;\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"   const responseBody = pm.response.text();\r",
+							"  const guidRegex = /^\"[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\"$/;\r",
+							"   \r",
+							"     pm.expect(responseBody).to.match(guidRegex);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let uuid = require('uuid');\r",
+							"let lodash = require('lodash');\r",
+							"\r",
+							"const randomNo = lodash.random(0, 1);\r",
+							"pm.collectionVariables.set(\"es_error\", randomNo);\r",
+							"console.log(randomNo);\r",
+							"\r",
+							"if (randomNo == 0) {\r",
+							"    pm.collectionVariables.set(\"guid_prueba\", '');\r",
+							"} else {\r",
+							"    let guid = uuid.v4();\r",
+							"    pm.collectionVariables.set(\"guid_prueba\", guid);\r",
+							"    console.log(guid);\r",
+							"}\r",
+							"\r",
+							"// Generar una fecha aleatoria dentro de un rango de años\r",
+							"function getRandomDate() {\r",
+							"    const start = new Date(2020, 0, 1).getTime(); // Fecha inicial (Ej: 2020-01-01)\r",
+							"    const end = new Date().getTime(); // Fecha actual como límite superior\r",
+							"    const randomTimestamp = Math.floor(Math.random() * (end - start) + start);\r",
+							"    return new Date(randomTimestamp).toISOString(); // Formato ISO 8601\r",
+							"}\r",
+							"\r",
+							"// Guardar la fecha en una variable de entorno en Postman\r",
+							"pm.environment.set(\"randomDate\", getRandomDate());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"{{guid_prueba}}\",\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"birthDate\": \"{{randomDate}}\",\r\n  \"gender\": \"MALE\",\r\n  \"email\": \"{{$randomEmail}}\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"{{$randomPhoneNumber}}\"\r\n    },\r\n{\r\n      \"number\": \"{{$randomPhoneNumber}}\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7299/api/Patient",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7299",
+					"path": [
+						"api",
+						"Patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const es_error = pm.collectionVariables.get(\"es_error\");\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check guid in response\", function () {\r",
+							"    const usedGuid = pm.collectionVariables.get(\"guid_prueba\");\r",
+							"    var jsonArr = pm.response.json();\r",
+							"    const filteredArr = jsonArr.filter(item => item.id === usedGuid);\r",
+							"    console.log(filteredArr);\r",
+							"    if (es_error == 0){\r",
+							"        pm.expect(filteredArr.length).to.eql(0);\r",
+							"    }else{\r",
+							"        pm.expect(filteredArr.length).to.eql(1);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7299/api/Patient",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7299",
+					"path": [
+						"api",
+						"Patient"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "guid_prueba",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "estatus_esperado",
+			"value": "200",
+			"type": "string"
+		},
+		{
+			"key": "randomDate",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "es_error",
+			"value": ""
+		}
+	]
+}
