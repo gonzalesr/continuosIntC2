@@ -30,7 +30,7 @@ jobs:
         run: ssh staging 'sudo systemctl stop patient.service'
 
       - name: Do deploy
-        run: ssh staging 'cd /var/www/patientapp/ && bash deploy.sh'
+        run: ssh staging 'cd /var/www/continuosIntC2/ && bash deploy.sh'
       - name: Start the server
         if: ${{ always() }}
         run: ssh staging 'sudo systemctl start patient.service'
