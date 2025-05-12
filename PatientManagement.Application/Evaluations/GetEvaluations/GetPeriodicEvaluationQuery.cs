@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.Evaluations.GetEvaluations
 {
-    public record GetPeriodicEvaluationQuery(string SearchTerm): IRequest<IEnumerable<PeriodicEvaluationDto>>;
-   
+     public record GetPeriodicEvaluationQuery(string SearchTerm) : IRequest<IEnumerable<PeriodicEvaluationDto>>;
+
 }

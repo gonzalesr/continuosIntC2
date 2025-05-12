@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.Evaluations.GetEvaluations
 {
-    public class PeriodicEvaluationDto
-    {
-        public Guid Id { get; set; }
-        public Guid PatientId { get; set; }
-        public DateTime Date { get;  set; }
-        public string EvaluationNotes { get;  set; }
-        public decimal Weight { get;  set; }
-        public decimal Height { get;  set; }
-        public int Systolic { get;  set; }
-        public int Diastolic { get; set; }        
-        public int HeartRate { get; set; }
-    }
+     public class PeriodicEvaluationDto
+     {
+          public Guid Id { get; set; }
+          public Guid PatientId { get; set; }
+          public DateTime Date { get; set; }
+          public string EvaluationNotes { get; set; }
+          public decimal Weight { get; set; }
+          public decimal Height { get; set; }
+          public int Systolic { get; set; }
+          public int Diastolic { get; set; }
+          public int HeartRate { get; set; }
+     }
 }

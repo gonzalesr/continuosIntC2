@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.Patients.GetPatients
 {
-    public record GetPatientsQuery(string SearchTerm) : IRequest<IEnumerable<PatientDto>>;
+     public record GetPatientsQuery(string SearchTerm) : IRequest<IEnumerable<PatientDto>>;
 }
