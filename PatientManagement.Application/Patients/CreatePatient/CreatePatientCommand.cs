@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.Patients.CreatePatient
 {
-    public record CreatePatientCommand(Guid Id, string name, DateTime birthDate, string gender, string email, ICollection<CreatePatientPhoneCommand> phones) : IRequest<Guid>;
-    public record CreatePatientPhoneCommand(string Number);
+     public record CreatePatientCommand(Guid Id, string name, DateTime birthDate, string gender, string email, ICollection<CreatePatientPhoneCommand> phones) : IRequest<Guid>;
+     public record CreatePatientPhoneCommand(string Number);
 }

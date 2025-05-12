@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.InitialConsultation.CreateInitialConsultation
 {
-   public record CreateInitialConsultationCommand(Guid id, Guid patientId, DateTime date, string reason, string observations) : IRequest<Guid>;
+     public record CreateInitialConsultationCommand(Guid id, Guid patientId, DateTime date, string reason, string observations) : IRequest<Guid>;
 }

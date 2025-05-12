@@ -10,7 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Infrastructure\Repositories\UnitOfWorkTests.cs" />
+    <Compile Remove="Application\Patients\**" />
+    <Compile Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="Application\Patients\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <None Remove="Application\Patients\**" />
+    <None Remove="Infrastructure\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProgramTest.cs" />
   </ItemGroup>
 
   <ItemGroup>

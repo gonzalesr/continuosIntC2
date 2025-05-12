@@ -12,21 +12,20 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application
 {
-    public static class Extensions
-    {
-        public static IServiceCollection AddAplication(this IServiceCollection services)
-        {
-            services.AddMediatR(config =>
-                config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
-            );
+     public static class Extensions
+     {
+          public static IServiceCollection AddAplication(this IServiceCollection services) {
+               services.AddMediatR(config =>
+                   config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
+               );
 
 
-            services.AddSingleton<IPatientFactory, PatientFactory>();
-            services.AddSingleton<IInitialConsultationFactory, InitialConsultationFactory>();
-            services.AddSingleton<IPeriodicEvaluationFactory, PeriodicEvaluationFactory>();
+               services.AddSingleton<IPatientFactory, PatientFactory>();
+               services.AddSingleton<IInitialConsultationFactory, InitialConsultationFactory>();
+               services.AddSingleton<IPeriodicEvaluationFactory, PeriodicEvaluationFactory>();
 
-            return services;
-        }
+               return services;
+          }
 
-    }
+     }
 }

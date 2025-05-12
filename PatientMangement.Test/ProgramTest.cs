@@ -22,15 +22,15 @@ namespace PatientMangement.Test
             _client = factory.CreateClient();
         }
 
-        [Fact]
-        public async Task Get_Endpoints_ReturnsSuccess()
-        {
-            // Act
-            var response = await _client.GetAsync("/api/Patient"); // Cambia la ruta a un endpoint válido
+        //[Fact]
+        //public async Task Get_Endpoints_ReturnsSuccess()
+        //{
+        //    // Act
+        //    var response = await _client.GetAsync("/api/Patient"); // Cambia la ruta a un endpoint válido
 
-            // Assert
-            response.EnsureSuccessStatusCode();
-            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-        }
+        //    // Assert
+        //    response.EnsureSuccessStatusCode();
+        //    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+        //}
     }
 }

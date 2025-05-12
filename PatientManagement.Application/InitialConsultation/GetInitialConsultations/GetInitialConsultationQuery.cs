@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.InitialConsultation.GetInitialConsultations
 {
-    public record GetInitialConsultationQuery(string SearchTerm) : IRequest<IEnumerable<InitialConsultationDto>>;
+     public record GetInitialConsultationQuery(string SearchTerm) : IRequest<IEnumerable<InitialConsultationDto>>;
 }
