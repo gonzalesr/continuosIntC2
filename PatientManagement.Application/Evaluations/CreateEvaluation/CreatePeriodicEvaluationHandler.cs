@@ -12,32 +12,32 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PatientManagement.Application.Evaluations.CreateEvaluation
 {
-     public class CreatePeriodicEvaluationHandler : IRequestHandler<CreatePeriodicEvaluationCommand, Guid>
-     {
-          private readonly IPeriodicEvaluationFactory _periodicEvaluationFactory;
-          private readonly IPeriodicEvaluationRepository _periodicEvaluationRepository;
-          private readonly IUnitOfWork _unitOfWork;
+    public class CreatePeriodicEvaluationHandler : IRequestHandler<CreatePeriodicEvaluationCommand, Guid>
+    {
+        private readonly IPeriodicEvaluationFactory _periodicEvaluationFactory;
+        private readonly IPeriodicEvaluationRepository _periodicEvaluationRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-          public CreatePeriodicEvaluationHandler(IPeriodicEvaluationFactory periodicEvaluationFactory,
-              IPeriodicEvaluationRepository periodicEvaluationRepository,
-              IUnitOfWork unitOfWork) {
-               _periodicEvaluationFactory = periodicEvaluationFactory;
-               _periodicEvaluationRepository = periodicEvaluationRepository;
-               _unitOfWork = unitOfWork;
-          }
+        public CreatePeriodicEvaluationHandler(IPeriodicEvaluationFactory periodicEvaluationFactory,
+            IPeriodicEvaluationRepository periodicEvaluationRepository,
+            IUnitOfWork unitOfWork) {
+            _periodicEvaluationFactory = periodicEvaluationFactory;
+            _periodicEvaluationRepository = periodicEvaluationRepository;
+            _unitOfWork = unitOfWork;
+        }
 
-          public async Task<Guid> Handle(CreatePeriodicEvaluationCommand request, CancellationToken cancellationToken) {
-               // Reconstruir BloodPressureValue desde los valores separados
-               var bloodPressure = new BloodPressureValue(request.Systolic, request.Diastolic);
-               var periodicEvaluation = _periodicEvaluationFactory.Create(request.id, request.patientId, request.date, request.evaluationNotes, request.weight, request.height, bloodPressure, request.heartRate);
+        public async Task<Guid> Handle(CreatePeriodicEvaluationCommand request, CancellationToken cancellationToken) {
+            // Reconstruir BloodPressureValue desde los valores separados
+            var bloodPressure = new BloodPressureValue(request.Systolic, request.Diastolic);
+            var periodicEvaluation = _periodicEvaluationFactory.Create(request.id, request.patientId, request.date, request.evaluationNotes, request.weight, request.height, bloodPressure, request.heartRate);
 
-               await _periodicEvaluationRepository.AddAsync(periodicEvaluation);
+            await _periodicEvaluationRepository.AddAsync(periodicEvaluation);
 
-               await _unitOfWork.CommitAsync(cancellationToken);
+            await _unitOfWork.CommitAsync(cancellationToken);
 
-               return periodicEvaluation.Id;
-          }
+            return periodicEvaluation.Id;
+        }
 
 
-     }
+    }
 }
