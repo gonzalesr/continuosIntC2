@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace PatientManagement.Application.Evaluations.CreateEvaluation
 {
-     public record CreatePeriodicEvaluationCommand(Guid id, Guid patientId, DateTime date, string evaluationNotes, decimal weight, decimal height, int Systolic, int Diastolic, int heartRate) : IRequest<Guid>;
+    public record CreatePeriodicEvaluationCommand(Guid id, Guid patientId, DateTime date, string evaluationNotes, decimal weight, decimal height, int Systolic, int Diastolic, int heartRate) : IRequest<Guid>;
 }
